@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:id="@+id/lineChart"/>
+
+    <!--    <TextView-->
+<!--        android:id="@+id/frequencyTextView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/voltageTextView"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:text="Frequency: " />-->
+
+    <TextView
+        android:id="@+id/voltageTextView"
+        android:layout_width="284dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lineChart"
+        android:layout_marginTop="18dp"
+        android:text="Voltage: "
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/peakToPeakTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dutyCycleTextView"
+        android:layout_marginTop="21dp"
+        android:text="Peak-to-Peak: "
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/dutyCycleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/voltageTextView"
+        android:layout_marginTop="21dp"
+        android:text="Duty Cycle: 0%"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/increaseScaleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/decreaseScaleButton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="20dp"
+        android:text="Increase Scale" />
+
+    <Button
+        android:id="@+id/decreaseScaleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="30dp"
+        android:text="Decrease Scale" />
+
+    <Button
+        android:id="@+id/autoScaleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="53dp"
+        android:layout_marginBottom="30dp"
+        android:layout_toStartOf="@+id/decreaseScaleButton"
+        android:text="Auto Scale" />
+
+    <Button
+        android:id="@+id/startStopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/autoScaleButton"
+        android:layout_marginEnd="69dp"
+        android:layout_marginBottom="19dp"
+        android:layout_toStartOf="@+id/increaseScaleButton"
+        android:text="Stop" />
+
+
+</RelativeLayout>
+
